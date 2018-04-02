@@ -49,22 +49,22 @@
         <h3><em>we provide the best.</em></h3>
     </div>
     <div class="row l2content2">
-        <div class="col-sm-4">
+        <div class="col-sm-4 hideme1">
             <i class="fa fa-shopping-cart"></i>
             <h1>E-Commerce</h1>
             <h4><small>eCommerce web design is our leading service, providing businesses nationwide with a professional website and shopping cart solution. We're prepared to help your company find a solution for the needs that best suit you.</small></h4>
             <br>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-4 hideme2">
             <i class="fa fa-desktop"></i>
             <h1>Responsive Design</h1>
             <h4><small>With an average of 40% of website visits coming from mobile devices, developing in a mobile and tablet friendly way is essential. Our team has the experience in using responsive technology to adapt your website to all mobile devices.</small></h4>
             <br>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-4 hideme3">
             <i class="fa fa-lock"></i>
             <h1>Web Security</h1>
-            <h4><small>The term “web security” covers a lot of ground, everything from virus protection to data encryption and more. To help you determine what you need – and to save you hours on Google and Wikipedia – we’ve created this easy-to-understand guide that covers all the basics.</small></h4>
+            <h4><small>The term “web security” covers a lot of ground, everything from virus protection to data encryption and more. To help you determine what you need – and to save you hours on Google and Wikipedia – we’ve created this.</small></h4>
             <br>
         </div>
     </div>
@@ -156,7 +156,7 @@
     </div>
     <div class="l5content2">
         <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-4 hideme1">
                 <img src="images/team/1.JPG" class="img-circle">
                 <br>
                 <h1>Avadh vashisth</h1>
@@ -170,7 +170,7 @@
                 </div>
             </div>
             
-            <div class="col-sm-4">
+            <div class="col-sm-4 hideme2">
                 <img src="images/team/2.jpg" class="img-circle">
                 <br>
                 <h1>Pulkit Jain</h1>
@@ -184,7 +184,7 @@
                 </div>
             </div>
             
-            <div class="col-sm-4">
+            <div class="col-sm-4 hideme3">
                 <img src="images/team/1.JPG" class="img-circle">
                 <br>
                 <h1>Rohan Kumar</h1>
@@ -201,6 +201,39 @@
         </div>
     </div>
 </div>
+    
+<div class="container-fluid text-center" id="layer6">
+        <form action="#" name="MyForm">
+            <h1>CONTACT US</h1>
+            <hr>
+            <input type="text" name="sname" placeholder="Name">
+            <br>
+            <input type="text" name="email" placeholder="E-mail">
+            <br>
+            <input type="text" name="phone" placeholder="Phone Number">
+            <br>
+            <input type="text" name="message" placeholder="Message">
+            <br>
+            <input id="submit" type="submit" value="SUBMIT">
+        </form>
+        <div id="footer">
+            <div class="row">
+            <div class="col-sm-6">
+                <h1>LOCATION</h1>
+                <p>3481 Melrose Place<br>Beverly Hills, CA 90210</p>
+            </div>
+            <div class="col-sm-6">
+                <h1>AROUND THE WEB</h1>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-google"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+            </div>
+            </div>
+        </div>
+</div>
+    
+    
 <script>
     console.log(window.innerWidth)
     //nav bar transition
@@ -225,6 +258,36 @@
         $("nav").addClass("navbar-inverse");
     }
     
+    $(document).ready(function(){
+        $(window).scroll(function(){
+            $(".hideme1").each(function(i){
+                var bottom_object = $(this).position().top - 300;
+                var bottom_window = $(window).scrollTop() + $(window).height();
+                
+                if(bottom_window > bottom_object){
+                    $(this).animate({'opacity':'1','top':'0'},500);
+                }
+            });
+            
+            $(".hideme2").each(function(i){
+                var bottom_object = $(this).position().top - 300;
+                var bottom_window = $(window).scrollTop() + $(window).height();
+                
+                if(bottom_window > bottom_object){
+                    $(this).animate({'opacity':'1','top':'0'},700);
+                }
+            });
+            
+            $(".hideme3").each(function(i){
+                var bottom_object = $(this).position().top - 300;
+                var bottom_window = $(window).scrollTop() + $(window).height();
+                
+                if(bottom_window > bottom_object){
+                    $(this).animate({'opacity':'1','top':'0'},900);
+                }
+            });
+        })
+    });
     
 </script>
 </body>
