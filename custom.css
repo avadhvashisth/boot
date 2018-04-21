@@ -235,6 +235,10 @@ nav{
     color: orange;
 }
 
+.l5content2 li a:hover{
+    text-decoration: none;
+}
+
 .social-link{
     display: inline-block;
     margin-top: 15px;
